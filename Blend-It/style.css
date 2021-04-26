@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100&display=swap');
+/* Particular font was picked through the Google Fonts and the link was copy pasted just at the
+top of the css stylesheet to make the font apply to the whole website.*/
+
+
+html {
+  font-family: 'Noto Sans SC';
+  background-image: url(images/Background.png);
+}
+/*This font applies to whole website. */
+
+body {
+  padding: 0 0;
+  margin: 0 0;
+}
+/*Padding and margin gives space around the content, but I didn't set up any for body. */
+
+p {
+  margin: 0 55px;
+  font-size: 110%;
+/*Space of text of 55px on left and right side was set up by margin and font size of 110%. */
+}
+
+.header {
+  width: 70%;
+  height: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 0 20px 0;
+}
+/* This is styling of image in the header. It has specific width and height, displayed as block - which
+allows to take up whole width, margin-left and margin-right as "auto" option to put the image to the center
+and padding of 20px at the bottom to allow space between header and menu. */
+.nav {
+  position: sticky;
+  top: 0;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu a {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding: 2% 0%;
+  text-decoration: none;
+  color: #212121;
+  font-size: 170%;
+  font-variant: small-caps;
+
+}
+/* This is styling of links in the menu. Links are displayed in the line, they
+are positioned in the center, spacing is 20px on top and bottom and 50px on sides.
+Color was picked with color picker, links don't have any decoration and font size is 180%.*/
+
+.buttons {
+  content:'';
+  width: 25%;
+  height: 25%;
+  background-color: #81de90;
+  transition: background-color 0.3s;
+}
+/* This is styling of the links (buttons). It doesn't display any extra content,
+it has specific width, height and color. The time of color transition after mouse hovers
+is 0.3 seconds. */
+
+.buttons:hover {
+  background-color: #ff8c00;
+}
+/* After mouse hovers over menu buttons, colour changes from green to orange. Different
+height is also noticeable while hovering. */
+
+.mixit {
+  margin: 40px 0 80px 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+/* This div class gives style to whole section of two images, which after mouse hover change.
+They have spacing 40px at top, 80px at bottom. Width and height of pictures is full and
+position is relative to make second picture appear only in this space. */
+
+.mixit img {
+  width: 100%;
+  height: 100%;
+}
+/* Maximum weight and height of both images. */
+
+.mixit-transition {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+/* This is transition of two images. Second image has position absolute to cover
+first picture, top and left position and original opacity of 0. After mouse hover,
+image slowly appears thanks to 0.5s ease transition. */
+
+.mixit-transition:hover {
+  opacity: 1;
+}
+/* After mouse hover, second image appears fully. */
+
+.blendit {
+  margin: 40px 0 60px 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+/* Same rules and settings as for "mixit" sections apply to sections
+with name "blendit". */
+
+.blendit img {
+  width: 100%;
+  height: 100%;
+}
+
+.blendit-transition {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.blendit-transition:hover {
+  opacity: 1;
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* This is styling of text to be seperated to left and right side. Text floats left,
+has size of 50%. */
+
+.column-float::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+/* There is no additional content, content takes up full width and it is not allowed
+to float on both sides. */
+
+.line {
+  margin: 40px 0;
+}
+/* Margin of 40px allows spacing between two images. */
+
+.line::after {
+  content:"";
+  display:block;
+  clear:both;
+}
+/* There is no additional content, content takes up full width and it is not allowed
+to float on both sides. */
+
+.fade {
+  position: relative;
+}
+
+.fade::after {
+  content: "Anti-Inflammatory Smoothies";
+  color: white;
+  font-size: 300%;
+  font-family: 'Noto Sans SC';
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background: black;
+  width: 80%;
+  height: 99%;
+  top: 0%;
+  left: 10%;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.4s ease-in;
+}
+/* This is styling of black layer on top of the image, which will show when hovering over
+the original picture. It will show white text in the center with size of 300%. Display flex helps
+content to not overflow. Layer is black, it has specific size (width and height) and specific
+location (top and left), position is absolute and layer is not visible (0). Transition of 0.4
+brings the layer slowly over the image. */
+
+.fade:hover::after {
+  opacity: 0.5;
+}
+/* Opacity stays at 0.5 after mouse hover. */
+
+.fade2 {
+  position: relative;
+}
+.fade2::after {
+  content: "Energy-Boosting Smoothies";
+  color: white;
+  font-size: 300%;
+  font-family: 'Noto Sans SC';
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background: black;
+  width: 80%;
+  height: 99%;
+  top: 0%;
+  right: 10%;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.4s ease-in;
+}
+
+.fade2:hover::after {
+  opacity: 0.5;
+}
+/* Settings for "fade2" transition image are the same as for "fade" transition, except
+the content. */
+
+.fade3 {
+  position:relative;
+  margin: 30px 0;
+}
+/* Position relative helped to put black layer on the top of the picture and
+30px margin left some space on above and under the picture. */
+
+.fade3::after {
+  content: "Healthy Green Smoothies";
+  color: white;
+  font-size: 300%;
+  font-family: 'Noto Sans SC';
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background: black;
+  width: 90%;
+  height: 100%;
+  bottom: 0%;
+  left: 5%;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.4s ease-in;
+}
+
+.fade3:hover::after {
+  opacity: 0.5;
+}
+/* Here are the same settings as for images above except the content, size and different location. */
+
+.list {
+display: grid;
+align-items: center;
+justify-content: center;
+padding: 0 55px;
+}
+/* Content in the class "list" is having display of grid to sit at right place, it is aligned to center. */
+
+.list2 {
+  display: contents;
+  align-items: center;
+  justify-content:center;
+}
+
+h3 {
+  padding: 10px;
+}
+/* The heading has spacing of 10px on each side. */
+
+.gif {
+  padding: 30px;
+}
+/* Gif has spacing of 30px on each side. */
+
+footer {
+  background-color: #81de90;
+  margin: 2% 0 0 0;
+  font-size: 120%;
+  padding: 0 0 2% 0;
+}
+/* Footer at the bottom has green color and spacing at the top and bottom*/
+
+footer a {
+  color: #63661a;
+}
+.gallery {
+  padding: 40px 0;
+}
+/* This is div section is for image gallery. It has spacing of 40px on top and bottom. */
+
+figure{
+  max-width: 100vh;
+  margin: 0 auto 40px;
+  border: 2px solid black;
+}
+/* Figure is referencing the main picture in the gallery. It has maximum width, specific
+margin and black border around the frame of 2px. */
+
+figure img {
+  display: block;
+  max-width: 100%;
+  min-width: 100%;
+}
+/* Image in the figure section is displayed as block, and it has maximum width and minimum
+width of 100%. */
+
+.thumb-list {
+  text-align: center;
+}
+/* This refers to the list of pictures in the gallery. Thumbnails are align to center. */
+
+.thumb-list ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* Unordered list of images doesn't have any style and extra spacing. */
+
+.thumb-list ul li{
+  display: inline-block;
+  border: 1px solid black;
+  width: 10%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+/* Listed pictures (thumbnails) are displayed in line, have black boarder around them,
+have width of 10%, extra spacing on side of 5px and when hover, it shows a cursor. */
+
+.thumb-list ul li img {
+  display: block;
+  width: 100%;
+}
+/* Each image is displayed as block and have width of 100% when viewed. */
+
+video {
+  padding: 30px 0;
+}
+/* Video has spacing of 30px at the top and bottom to separate video from text. */
