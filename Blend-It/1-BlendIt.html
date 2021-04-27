@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<!--Html page starts with html element.-->
+  <head>
+    <!-- Every html has head section, where it is used
+    for details before writing the actual content.-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <!--This element allows my website to be mobile friendly.-->
+    <link rel="stylesheet" href="style.css">
+    <!--This allows html page to be linked to the css stylesheet.-->
+    <title>BLEND IT</title>
+    <!--Title of the page is visible on the tab in the browser.-->
+  </head>
+  <body>
+    <!-- Body element cotains the main content of the page like paragraphs, headings,
+    pictures and footer.-->
+    <div class="nav">
+      <div class="menu">
+        <a href="1-BlendIt.html" class="buttons">Home</a>
+        <a href="2-SmoothieRecipes.html" class="buttons long">Recipes</a>
+        <a href="https://www.argos.co.uk/browse/appliances/blenders-and-food-processing/blenders-and-smoothie-makers/c:29941/" target="_blank" class="buttons long">Catalogue</a>
+        <a href="https://www.honestly-good.co" target="_blank" class="buttons">About</a>
+        <!--Here the menu was divided into 2 div elements to be able to style them in css and seperate them from
+        rest of the content. Buttons of the menu are in the links <a>, where after clicking it takes viewer to
+      linked page. Some sources are internal and some external. External links open in new tab thanks to "_blank" target.-->
+      </div>
+    </div>
+<header>
+  <!--Top section of the page, where usually heading and description of the page is.-->
+<img src="images/heading.jpg" alt="Blend It" class="header">
+  <!--For heading I decided to go with picture with logo in the middle to represent the whole
+  website. Source is images folder, description Blend It and special class to be able to style it in css.-->
+</header>
+<center>
+<h2> Let us be your inspiration for your next smoothie drink! </h2>
+<!--Heading in the <h1> tag.-->
+<div class="mixit">
+  <a href="2-SmoothieRecipes.html">
+   <img src="images/MixIt.jpg" alt="Mix It" />
+   <img class="mixit-transition" src="images/MixIt2.jpg" alt="Get Inspired" />
+  </a>
+  <!--Here are 2 images, which will lie on each other and after mouse hover, second image will apear. To do this transition,
+  second image has special class to set it up in css. Section was seperated by div element,
+  picture has internal link to another html page. Both images have description and source is images folder. To make images same size
+  , width was put on 100%.-->
+</div>
+<h2> Everything starts with good blender.. </h2>
+<div class="blendit">
+  <a href="https://www.argos.co.uk/browse/appliances/blenders-and-food-processing/blenders-and-smoothie-makers/c:29941/" target="_blank">
+  <img src="images/BlendIt1.jpg" alt="Blend It" />
+  <img class="blendit-transition" src="images/BlendIt2.jpg" alt="Pick Yours Today" />
+</a>
+<!--Here is another "interactive image", where the only difference in external link in <a> tag.-->
+</div>
+<h2> Are you more of a picture type of person? </h2>
+<div class="gallery">
+  <figure>
+    <img src="images/thumb1.jpg" alt="Sunburst Smoothie" id="mainImg">
+    </figure>
+    <div class="thumb-list">
+      <ul>
+        <li><img src="images/thumb1.jpg" alt="Sunburst Smoothie" id="thumb1"></li>
+        <li><img src="images/thumb2.jpeg" alt="Sunburst Smoothie" id="thumb2"></li>
+        <li><img src="images/thumb3.jpg" alt="Sunburst Smoothie" id="thumb3"></li>
+        <li><img src="images/thumb4.jpeg" alt="Sunburst Smoothie" id="thumb4"></li>
+        <li><img src="images/thumb5.jpg" alt="Sunburst Smoothie" id="thumb5"></li>
+        <li><img src="images/thumb6.jpg" alt="Sunburst Smoothie" id="thumb6"></li>
+      </ul>
+      </div>
+      </div>
+<!-- This "gallery" section shows thumbnails in the small frames and then full picture in
+one big frame, when viewed. Figure here referes to main image. It has description and specific ID
+to then add function in javascript. Small thumbnails pictures are under section "thumb-list", where
+each of them has description and specific ID and are part of an unordered list.-->
+
+<script>
+  mainImg = document.getElementById("mainImg");
+
+  thumb1 = document.getElementById("thumb1");
+  thumb1Src = document.getElementById("thumb1").src;
+  thumb2 = document.getElementById("thumb2");
+  thumb2Src = document.getElementById("thumb2").src;
+  thumb3 = document.getElementById("thumb3");
+  thumb3Src = document.getElementById("thumb3").src;
+  thumb4 = document.getElementById("thumb4");
+  thumb4Src = document.getElementById("thumb4").src;
+  thumb5 = document.getElementById("thumb5");
+  thumb5Src = document.getElementById("thumb5").src;
+  thumb6 = document.getElementById("thumb6");
+  thumb6Src = document.getElementById("thumb6").src;
+
+  thumb1.addEventListener("click",function(){
+    mainImg.src=thumb1Src
+  })
+  thumb2.addEventListener("click",function(){
+    mainImg.src=thumb2Src
+  })
+  thumb3.addEventListener("click",function(){
+    mainImg.src=thumb3Src
+  })
+  thumb4.addEventListener("click",function(){
+    mainImg.src=thumb4Src
+  })
+  thumb5.addEventListener("click",function(){
+    mainImg.src=thumb5Src
+  })
+  thumb6.addEventListener("click",function(){
+    mainImg.src=thumb6Src
+  })
+
+</script>
+
+<!--Script is section for javascript. Every image has their name, document Element and their specific ID
+at the end, so js then can refer to them. There is also second version with ".src" source, which can then
+be used for the function to make other images appear in the main window.
+In the second part of the script section, there is added function to images. Every thumbnail image has
+Event Listener, "click" as a function and then instruction to display sourced image in the main window of gallery.-->
+
+<h2> All recipes for these delicious-looking smoothie drinks you can find on this website!</h2>
+<!--Another heading, but smaller in <h2> tag.-->
+<h3>Click <a href="2-SmoothieRecipes.html">here</a> for more information.</h3>
+<!--Internal link in <a> tag in the heading.-->
+<footer>
+ <section class="column-float">
+  <div class="column">
+    <h3>Inspiration and Resources</h3>
+    <p><a href="https://simplegreensmoothies.com">Simple Green Smoothies</a></p>
+    <p><a href="https://www.rawblend.com.au">Raw Blend</a></p>
+    <p><a href="https://www.macheesmo.com">Macheesmo</a></p>
+    <p><a href="https://mindfulavocado.com">Mindful Avocado</a></p>
+  </div>
+  <div class="column">
+    <h3> Find more about us on social media. </h3>
+  <a href="https://twitter.com/THGsmoothieco">
+    <img src="images/Twitter.png" alt="Twitter" width="11%">
+  </a>
+
+  <a href="https://www.instagram.com/thehonestlygoodsmoothiecompany/">
+    <img src="images/Instagram.png" alt="Instagram" width="11%">
+  </a>
+
+  <a href="https://www.facebook.com/TheHonestlyGoodSmoothieCompany/">
+    <img src="images/Facebook.png" alt="Facebook" width="10%">
+  </a>
+ </section>
+<!--Here is the footer, which was devided by section class into two seperate div sections "column" to create two same sized columns.
+First one has few external sources listed in the <p> paragraphs tags with <a> tags, every source is then listed in the report. Second div section
+  contains social media icons images with appropriate description "alt", external source linked to it. Every picture
+  has different width to make all of them look approximately the same.-->
+<p> Created by Lucie Smejkalova; P2601017 </p>
+</footer>
+</center>
+<!--The end of centered content-->
+</body>
+<!--The end of body tag.-->
+</html>
+<!--The end of html-->
